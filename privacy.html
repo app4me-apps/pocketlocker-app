@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — Pocket Locker</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="index.html" class="brand">
+      <img src="logo.png" alt="Pocket Locker" class="brand-mark-img">
+      Pocket Locker
+    </a>
+    <nav class="nav-links">
+      <a href="index.html#features">Features</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="index.html#contact">Support</a>
+    </nav>
+  </div>
+</header>
+
+<main class="legal-page">
+  <div class="wrap">
+    <a href="index.html" class="back-link">← Back to Pocket Locker</a>
+    <h1>Privacy Policy</h1>
+    <p class="legal-updated">Last updated: August 2026</p>
+
+    <p>This Privacy Policy explains how Pocket Locker ("the app", "we", "us") handles your information. We've written it to describe exactly what the app does — no more, no less.</p>
+
+    <h2>The short version</h2>
+    <p>Pocket Locker is built to work entirely on your device. By default, nothing you store in the app — documents, photos, passwords, notes — is ever sent to us or to any third party. We do not operate any servers that receive your data, and we cannot see, access, or recover it.</p>
+
+    <h2>What's stored, and where</h2>
+    <p>Everything you add to Pocket Locker — titles, notes, reference numbers, passwords, and any photos or PDFs you attach — is stored in a local database on your device only.</p>
+    <ul>
+      <li><strong>Sensitive text fields</strong> (titles, notes, account/reference numbers, item names, passwords) are individually encrypted using AES-256 before they're written to the local database.</li>
+      <li><strong>The encryption key</strong> is generated on your device and stored in your phone's hardware-backed secure storage (the iOS Keychain or Android Keystore) — the same secure storage used for saved passwords system-wide. This key never leaves your device and is never transmitted anywhere, including to us.</li>
+      <li><strong>Passwords</strong> you save inside the app are stored using this same hardware-backed secure storage rather than the general database, for an extra layer of protection.</li>
+    </ul>
+
+    <h2>Optional Google Drive backup</h2>
+    <p>Pocket Locker includes an optional backup feature that is <strong>off by default</strong>. If you choose to turn it on:</p>
+    <ul>
+      <li>You'll sign in with your own Google account through Google's standard sign-in process. We do not see or store your Google password.</li>
+      <li>Your encrypted local database is uploaded to a special hidden folder in your Google Drive called the "application data folder." This folder is only accessible to Pocket Locker — it does not appear in your regular Google Drive, and no other app or person (including us) can see or access it.</li>
+      <li>We request only the <span class="mono-tag" style="text-transform:none;letter-spacing:normal;font-size:0.95rem;">drive.appdata</span> permission from Google — the most restrictive Drive permission available, which cannot read, modify, or see any of your other Drive files.</li>
+      <li>You can disconnect this at any time from within the app, or by revoking Pocket Locker's access directly from your Google Account's permissions page.</li>
+    </ul>
+
+    <h2>Device permissions we ask for, and why</h2>
+    <ul>
+      <li><strong>Camera</strong> — to let you scan and photograph documents directly into the app.</li>
+      <li><strong>Photos</strong> — to let you attach existing photos from your device as documents.</li>
+      <li><strong>Biometrics (Face ID / Fingerprint)</strong> — to lock the app; handled entirely by your device's operating system, not by us.</li>
+      <li><strong>Notifications</strong> — to show you reminders for expiring documents that you've chosen to set.</li>
+    </ul>
+    <p>None of these permissions are used to collect or transmit data to us. They exist solely so the app can function as described.</p>
+
+    <h2>What we don't do</h2>
+    <ul>
+      <li>We do not run analytics or tracking of any kind inside the app.</li>
+      <li>We do not show ads, and we do not share, sell, or rent any information to advertisers or data brokers.</li>
+      <li>We do not have user accounts, so there is no central record of who uses the app or what they've stored.</li>
+    </ul>
+
+    <h2>Deleting your data</h2>
+    <p>Deleting a document moves it to the in-app Trash, where it's automatically and permanently removed after 30 days (or sooner, if you empty it manually). Uninstalling the app removes all local data from your device. If you've enabled Google Drive backup, that backup remains in your Drive until you delete it yourself, either from within the app or from your Google Account.</p>
+
+    <h2>Children's privacy</h2>
+    <p>Pocket Locker is not directed at children, and we do not knowingly collect information from children, consistent with the fact that we do not collect information from anyone.</p>
+
+    <h2>Changes to this policy</h2>
+    <p>If this policy changes — for example, if we introduce a new feature that affects how data is handled — we'll update this page and change the "Last updated" date above.</p>
+
+    <h2>Contact us</h2>
+    <p>Questions about this policy or how Pocket Locker works can be sent to <a href="mailto:support@pocketlocker.app">support@pocketlocker.app</a>.</p>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-links">
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+      <a href="mailto:support@pocketlocker.app">Support</a>
+    </div>
+    <span class="copyright">© <span id="year"></span> Pocket Locker · pocketlocker.app</span>
+  </div>
+</footer>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
