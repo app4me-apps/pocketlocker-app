@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Redirecting to Pocket Locker...</title>
+<style>
+  body {
+    background: #0F172A;
+    color: #F8FAFC;
+    font-family: -apple-system, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    text-align: center;
+    padding: 24px;
+  }
+  a { color: #60A5FA; }
+</style>
+</head>
+<body>
+  <div>
+    <p>Redirecting back to Pocket Locker…</p>
+    <p><a id="fallback" href="#">Tap here if nothing happens automatically</a></p>
+  </div>
+  <script>
+    // Google appends the auth response as a query string (authorization
+    // code flow) — forward it straight into the app via the custom
+    // scheme, preserving every parameter exactly as received.
+    var params = window.location.search || window.location.hash.replace('#', '?');
+    var target = 'pocketlocker://oauthredirect' + params;
+    document.getElementById('fallback').href = target;
+    window.location.href = target;
+  </script>
+</body>
+</html>
