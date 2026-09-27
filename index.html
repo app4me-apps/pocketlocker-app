@@ -4,7 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Pocket Locker — Every important document, locked to you alone</title>
-<meta name="description" content="Pocket Locker keeps your IDs, passwords, insurance, and documents encrypted and offline — organized your way, private by design.">
+<meta name="description" content="Scan documents, auto-fill the details, get expiry reminders. Pocket Locker keeps your IDs, passwords, insurance and documents encrypted, offline and organised in folders.">
+<link rel="canonical" href="https://pocketlocker.app/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Pocket Locker — Every important document, locked to you alone">
+<meta property="og:description" content="Scan documents, auto-fill the details, get expiry reminders. Encrypted, offline, organised in folders.">
+<meta property="og:url" content="https://pocketlocker.app/">
+<meta property="og:image" content="https://pocketlocker.app/logo.png">
 <link rel="stylesheet" href="style.css">
 <style>
   /* Additions only - hero download CTAs and footer social links.
@@ -66,6 +72,69 @@
     gap: 16px;
     margin-bottom: 14px;
   }
+
+  /* ---- New in this version: highlight banner + cards ---- */
+  .whats-new-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 22px;
+    padding: 7px 14px;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: inherit;
+    border: 1px solid rgba(7, 204, 253, 0.45);
+    background: rgba(0, 82, 253, 0.12);
+  }
+  .whats-new-tag .dot {
+    width: 8px; height: 8px; border-radius: 50%;
+    background: linear-gradient(135deg, #07CCFD, #0052FD);
+    box-shadow: 0 0 0 4px rgba(7, 204, 253, 0.2);
+  }
+  .new-badge {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    padding: 4px 10px;
+    border-radius: 999px;
+    color: #ffffff;
+    background: linear-gradient(135deg, #07CCFD, #0052FD);
+    margin-bottom: 12px;
+  }
+  .new-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+  @media (max-width: 900px) { .new-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 560px) { .new-grid { grid-template-columns: 1fr; } }
+  .new-card {
+    position: relative;
+    padding: 24px 22px;
+    border-radius: 18px;
+    border: 1px solid rgba(0, 82, 253, 0.4);
+    background: linear-gradient(160deg, rgba(7, 204, 253, 0.10), rgba(0, 82, 253, 0.06));
+    overflow: hidden;
+  }
+  .new-card .icon {
+    width: 46px; height: 46px;
+    border-radius: 14px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.4rem;
+    background: linear-gradient(135deg, #07CCFD, #0052FD);
+    margin-bottom: 14px;
+  }
+  .new-card h3 { margin: 0 0 8px; font-size: 1.15rem; }
+  .new-card p { margin: 0; opacity: 0.8; line-height: 1.6; }
+  .new-card .free {
+    position: absolute; top: 16px; right: 16px;
+    font-size: 0.7rem; font-weight: 700; letter-spacing: 0.05em;
+    padding: 3px 9px; border-radius: 999px;
+    border: 1px solid rgba(34, 197, 94, 0.6); color: #22C55E;
+  }
 </style>
 </head>
 <body>
@@ -77,13 +146,11 @@
       Pocket Locker
     </a>
     <nav class="nav-links">
+      <a href="#new">What's New</a>
       <a href="#features">Features</a>
-       <a href="guides/">Guides</a>
+      <a href="guides/">Guides</a>
       <a href="privacy.html">Privacy</a>
-      <a href="terms.html">Terms</a>
       <a href="support.html">Support</a>
-  
-   
     </nav>
   </div>
 </header>
@@ -99,9 +166,10 @@
       </div>
       <h1>Every important document.<br><span class="accent">Locked to you alone.</span></h1>
       <p class="lede">
-        Passwords, insurance, IDs, bank details, warranties — organized in
-        one place, encrypted on your device, and never uploaded anywhere
-        unless you choose to.
+        Scan it, let auto-fill do the typing, and get reminded before it
+        expires. Passwords, insurance, IDs, bank details, warranties —
+        organised in folders, encrypted on your device, and never uploaded
+        anywhere unless you choose to.
       </p>
       <div class="pill-row">
         <span class="pill">🔑 Passwords</span>
@@ -109,6 +177,8 @@
         <span class="pill">🚗 Vehicle</span>
         <span class="pill">🏦 Bank</span>
         <span class="pill">🧾 Warranty</span>
+        <span class="pill">🎓 Certificates</span>
+        <span class="pill">📝 Notes</span>
       </div>
       <div class="hero-ctas">
         <a class="store-btn live" href="https://apps.apple.com/in/app/pocket-locker-private-vault/id6813628223" target="_blank" rel="noopener">
@@ -120,6 +190,54 @@
           Coming soon to Google Play
         </span>
       </div>
+      <a class="whats-new-tag" href="#new">
+        <span class="dot"></span>
+        New: Document Scanner, Auto-fill, Light &amp; Dark mode →
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="new">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="new-badge">NEW IN VERSION 1.0.2</span>
+      <h2>Less typing. Less searching. More done.</h2>
+      <p>The biggest update yet — adding a document now takes seconds.</p>
+    </div>
+    <div class="new-grid">
+      <div class="new-card">
+        <span class="free">FREE</span>
+        <div class="icon">📄</div>
+        <h3>Document Scanner</h3>
+        <p>Point your camera at any document — the edges are found automatically, the page is straightened and cleaned, and several pages become one neat PDF.</p>
+      </div>
+      <div class="new-card">
+        <span class="free">FREE</span>
+        <div class="icon">✨</div>
+        <h3>Auto-fill from a photo</h3>
+        <p>Snap your RC, policy or ID and Pocket Locker reads the numbers, names and dates. You check each one, then tap Fill.</p>
+      </div>
+      <div class="new-card">
+        <div class="icon">🌗</div>
+        <h3>Light &amp; Dark mode</h3>
+        <p>Pick Light, Dark, or follow your phone's setting — with a fresh new look and new category icons.</p>
+      </div>
+      <div class="new-card">
+        <div class="icon">📁</div>
+        <h3>Folders for everything</h3>
+        <p>One folder per car, bank or family member. Choose the category, then the folder — everything stays exactly where you expect it.</p>
+      </div>
+      <div class="new-card">
+        <div class="icon">📋</div>
+        <h3>Copy All in one tap</h3>
+        <p>Tick the details you need — account number, IFSC, policy number — and copy them together, labels included, ready to paste.</p>
+      </div>
+      <div class="new-card">
+        <div class="icon">✂️</div>
+        <h3>Crop before saving</h3>
+        <p>Trim any photo down to just the document, so the table, the floor and your fingers stay out of it.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -128,7 +246,7 @@
   <div class="wrap">
     <div class="section-head">
       <h2>What it actually looks like</h2>
-      <p>No fluff, no gimmicks — just your documents, organized clearly.</p>
+      <p>No fluff, no gimmicks — just your documents, organised clearly.</p>
     </div>
     <div class="screenshots-scroll">
 
@@ -136,7 +254,7 @@
         <div class="phone-frame">
           <div class="phone-notch"></div>
           <div class="phone-screen phone-screen-real">
-            <img src="screenshot-1.jpeg" alt="Pocket Locker home screen with categories" class="phone-screenshot">
+            <img src="screenshot-1.jpeg" alt="Pocket Locker home screen with categories" class="phone-screenshot" loading="lazy">
           </div>
         </div>
         <p class="phone-caption">Your whole vault, at a glance</p>
@@ -146,20 +264,40 @@
         <div class="phone-frame">
           <div class="phone-notch"></div>
           <div class="phone-screen phone-screen-real">
-            <img src="screenshot-2.jpeg" alt="Custom items inside a category" class="phone-screenshot">
+            <img src="screenshot-2.jpeg" alt="Folders inside a category" class="phone-screenshot" loading="lazy">
           </div>
         </div>
-        <p class="phone-caption">Add and customize items exactly how you think</p>
+        <p class="phone-caption">Folders for every car, bank and family member</p>
       </div>
 
       <div>
         <div class="phone-frame">
           <div class="phone-notch"></div>
           <div class="phone-screen phone-screen-real">
-            <img src="screenshot-3.jpeg" alt="Document detail with renewal history" class="phone-screenshot">
+            <img src="screenshot-3.jpeg" alt="Document detail with renewal history" class="phone-screenshot" loading="lazy">
           </div>
         </div>
         <p class="phone-caption">Every detail, renewal history, and the document itself</p>
+      </div>
+
+      <div>
+        <div class="phone-frame">
+          <div class="phone-notch"></div>
+          <div class="phone-screen phone-screen-real">
+            <img src="screenshot-4.jpeg" alt="Scanning a document and auto-filling its details" class="phone-screenshot" loading="lazy">
+          </div>
+        </div>
+        <p class="phone-caption">Scan it — auto-fill does the typing</p>
+      </div>
+
+      <div>
+        <div class="phone-frame">
+          <div class="phone-notch"></div>
+          <div class="phone-screen phone-screen-real">
+            <img src="screenshot-5.jpeg" alt="Pocket Locker in light mode" class="phone-screenshot" loading="lazy">
+          </div>
+        </div>
+        <p class="phone-caption">Light or dark — your choice</p>
       </div>
 
     </div>
@@ -180,8 +318,8 @@
       </div>
       <div class="feature-card">
         <span class="num">02</span>
-        <h3>Screenshots blocked, always</h3>
-        <p>Screenshots and screen recording are disabled system-wide the moment the app is open — your documents can't accidentally end up in a gallery or a shared screen.</p>
+        <h3>Locked behind your device itself</h3>
+        <p>Face ID, fingerprint, or your phone's own screen lock — there's no separate app password to create or forget. Passwords stay hidden until you tap to show them.</p>
       </div>
       <div class="feature-card">
         <span class="num">03</span>
@@ -191,12 +329,12 @@
       <div class="feature-card">
         <span class="num">04</span>
         <h3>Restore everything, on any phone</h3>
-        <p>Back up your categories, documents, and every photo or PDF to Google Drive — then restore all of it on a new phone in minutes, ready to use offline again immediately.</p>
+        <p>Back up your categories, documents, and every photo or PDF to your own Google Drive — then restore all of it on a new phone in minutes, ready to use offline again immediately.</p>
       </div>
       <div class="feature-card">
         <span class="num">05</span>
         <h3>Reminders that don't let you forget</h3>
-        <p>Set multiple staged reminders before anything expires, and keep a full history of every past renewal alongside the current details.</p>
+        <p>Get reminded before insurance, PUC, licences or warranties expire, renew with one tap, and keep a full history of every past renewal alongside the current details.</p>
       </div>
       <div class="feature-card">
         <span class="num">06</span>
@@ -205,13 +343,13 @@
       </div>
       <div class="feature-card">
         <span class="num">07</span>
-        <h3>Locked behind your device itself</h3>
-        <p>Face ID, fingerprint, or your phone's own screen lock — there's no separate app password to create or forget.</p>
+        <h3>Forms made for each category</h3>
+        <p>Bank asks for IFSC and UPI ID, Passwords for username and website, Notes stay simple — and you can rename any field to suit your document.</p>
       </div>
       <div class="feature-card">
         <span class="num">08</span>
         <h3>As many categories as you need</h3>
-        <p>Start with ready-made categories, then add your own and customize them however makes sense to you — for genuinely easy access, not a rigid structure.</p>
+        <p>Start with ready-made categories, then add your own and customise them however makes sense to you — for genuinely easy access, not a rigid structure.</p>
       </div>
       <div class="feature-card">
         <span class="num">09</span>
@@ -226,6 +364,7 @@
   <div class="wrap">
     <div class="footer-top-row">
       <div class="footer-links">
+        <a href="guides/">Guides</a>
         <a href="privacy.html">Privacy Policy</a>
         <a href="terms.html">Terms of Service</a>
         <span class="footer-email">support@pocketlocker.app</span>
