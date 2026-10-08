@@ -1,0 +1,149 @@
+/* Pocket Locker guides — light theme matching the homepage */
+:root {
+  --bg: #F6F8FC;
+  --bg-alt: #EEF3FB;
+  --card: #FFFFFF;
+  --text: #0F172A;
+  --muted: #5B6478;
+  --border: #E3E8F1;
+  --blue: #0052FD;
+  --cyan: #07CCFD;
+  --grad: linear-gradient(135deg, #07CCFD 0%, #0052FD 100%);
+  --green: #16A34A;
+  --shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+img { max-width: 100%; height: auto; display: block; }
+a { color: var(--blue); }
+.wrap { max-width: 1120px; margin: 0 auto; padding: 0 20px; }
+
+/* ---------- Header ---------- */
+.site-header {
+  position: sticky; top: 0; z-index: 50;
+  background: rgba(246, 248, 252, 0.88);
+  backdrop-filter: saturate(180%) blur(12px);
+  -webkit-backdrop-filter: saturate(180%) blur(12px);
+  border-bottom: 1px solid var(--border);
+}
+.site-header .wrap { display: flex; align-items: center; justify-content: space-between; height: 66px; gap: 16px; }
+.brand { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 1.1rem; color: var(--text); text-decoration: none; }
+.brand-mark-img { width: 34px; height: 34px; border-radius: 9px; object-fit: cover; }
+.nav-links { display: flex; align-items: center; gap: 26px; }
+.nav-links a { color: var(--muted); text-decoration: none; font-weight: 500; font-size: 0.95rem; }
+.nav-links a:hover { color: var(--text); }
+@media (max-width: 760px) { .nav-links { gap: 16px; } .nav-links a:nth-child(n+4) { display: none; } }
+@media (max-width: 420px) { .nav-links a:nth-child(2) { display: none; } }
+
+/* ---------- Article layout ---------- */
+.article-wrap { max-width: 760px; margin: 0 auto; padding: 40px 20px 20px; }
+.crumbs { font-size: 0.88rem; color: var(--muted); margin-bottom: 18px; }
+.crumbs a { color: var(--muted); text-decoration: none; }
+.crumbs a:hover { color: var(--blue); }
+.article-wrap h1 { font-size: clamp(1.9rem, 4.6vw, 2.7rem); line-height: 1.15; letter-spacing: -0.025em; font-weight: 800; margin: 0 0 14px; }
+.article-wrap h2 { font-size: clamp(1.3rem, 3vw, 1.6rem); line-height: 1.25; letter-spacing: -0.015em; margin: 44px 0 12px; }
+.article-wrap h3 { font-size: 1.15rem; margin: 28px 0 8px; }
+.article-wrap p, .article-wrap li { color: #334155; font-size: 1.04rem; }
+.article-wrap > p { color: var(--muted); font-size: 1.1rem; }
+.article-wrap ol, .article-wrap ul { padding-left: 22px; }
+.article-wrap li { margin: 8px 0; }
+.article-wrap li::marker { color: var(--blue); font-weight: 700; }
+.article-wrap strong { color: var(--text); }
+.article-meta { color: var(--muted) !important; font-size: 0.9rem !important; margin: 0 0 26px; }
+
+/* Quick answer + note boxes */
+.tldr {
+  background: var(--card); border: 1px solid var(--border); border-left: 4px solid var(--blue);
+  border-radius: 14px; padding: 18px 22px; margin: 0 0 28px; box-shadow: var(--shadow);
+  color: #334155; font-size: 1.04rem;
+}
+.tldr strong { display: block; color: var(--blue); font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 6px; }
+.note {
+  background: #FFF8E6; border: 1px solid #F5DFA8; border-radius: 14px;
+  padding: 16px 20px; margin: 26px 0; color: #5C4A1A; font-size: 0.98rem;
+}
+.note strong { color: #3D2F0A; }
+
+/* Tables */
+.table-scroll { overflow-x: auto; margin: 18px 0; border-radius: 14px; border: 1px solid var(--border); background: var(--card); box-shadow: var(--shadow); }
+table.facts { width: 100%; border-collapse: collapse; font-size: 0.95rem; min-width: 560px; }
+table.facts th { background: var(--bg-alt); color: var(--text); text-align: left; font-weight: 700; padding: 12px 16px; border-bottom: 1px solid var(--border); }
+table.facts td { padding: 12px 16px; border-bottom: 1px solid var(--border); color: #334155; vertical-align: top; }
+table.facts tr:last-child td { border-bottom: none; }
+
+/* ---------- Guides list (guides/index.html) ---------- */
+.guide-list { display: grid; gap: 16px; margin: 28px 0 10px; }
+.guide-card {
+  display: block; background: var(--card); border: 1px solid var(--border); border-radius: 16px;
+  padding: 22px 24px; text-decoration: none; color: var(--text); box-shadow: var(--shadow);
+  transition: transform 0.15s ease, border-color 0.15s ease;
+}
+.guide-card:hover { transform: translateY(-3px); border-color: var(--blue); }
+.article-wrap .guide-card h2 { margin: 0 0 6px; font-size: 1.15rem; }
+.article-wrap .guide-card p { margin: 0; color: var(--muted); font-size: 0.96rem; }
+
+/* ---------- Download box ---------- */
+.cta-box {
+  background: var(--grad); color: #fff; border-radius: 24px;
+  padding: 34px 30px; margin: 44px 0; text-align: center;
+  box-shadow: 0 18px 40px rgba(0, 82, 253, 0.25);
+}
+.article-wrap .cta-box h2 { color: #fff; margin: 0 0 14px; }
+.cta-box ul { list-style: none; padding: 0; margin: 0 auto 22px; max-width: 480px; text-align: left; }
+.article-wrap .cta-box li { color: rgba(255, 255, 255, 0.95); position: relative; padding-left: 28px; margin: 8px 0; font-size: 0.98rem; }
+.cta-box li::before {
+  content: "✓"; position: absolute; left: 0; top: 3px; width: 19px; height: 19px; border-radius: 50%;
+  background: rgba(255, 255, 255, 0.25); color: #fff; font-size: 0.7rem; font-weight: 800;
+  display: flex; align-items: center; justify-content: center;
+}
+.cta-btns { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+.cta-btn {
+  display: inline-flex; align-items: center; gap: 10px;
+  background: #fff; color: #0F172A; text-decoration: none; font-weight: 600; font-size: 0.98rem;
+  padding: 13px 20px; border-radius: 14px; box-shadow: 0 8px 20px rgba(15, 23, 42, 0.18);
+  transition: transform 0.15s ease;
+}
+.cta-btn:hover { transform: translateY(-2px); }
+.cta-btn svg { width: 20px; height: 20px; flex-shrink: 0; }
+.article-wrap .cta-small { color: rgba(255, 255, 255, 0.88); font-size: 0.88rem; margin: 16px 0 0; }
+
+/* ---------- FAQ, related, sources ---------- */
+.faq details {
+  background: var(--card); border: 1px solid var(--border); border-radius: 14px;
+  padding: 0 20px; margin: 10px 0;
+}
+.faq summary { cursor: pointer; font-weight: 600; padding: 16px 0; list-style: none; position: relative; padding-right: 28px; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: "+"; position: absolute; right: 0; top: 13px; font-size: 1.3rem; color: var(--blue); font-weight: 500; }
+.faq details[open] summary::after { content: "–"; }
+.faq details p { margin: 0 0 16px; }
+.related ul { list-style: none; padding: 0; }
+.related li { margin: 8px 0; }
+.related a { font-weight: 600; text-decoration: none; }
+.related a:hover { text-decoration: underline; }
+.sources { margin-top: 44px; padding-top: 22px; border-top: 1px solid var(--border); font-size: 0.9rem; }
+.article-wrap .sources li, .article-wrap .sources p { font-size: 0.9rem; color: var(--muted); }
+
+/* ---------- Footer ---------- */
+.site-footer { padding: 36px 0; border-top: 1px solid var(--border); margin-top: 60px; }
+.footer-top-row { display: flex; flex-wrap: wrap; gap: 18px; align-items: center; justify-content: space-between; margin-bottom: 14px; }
+.footer-links { display: flex; flex-wrap: wrap; gap: 20px; align-items: center; }
+.footer-links a, .footer-email { color: var(--muted); text-decoration: none; font-size: 0.93rem; }
+.footer-links a:hover { color: var(--text); }
+.footer-social { display: flex; gap: 14px; }
+.footer-social a { display: inline-flex; width: 38px; height: 38px; align-items: center; justify-content: center; border-radius: 50%; background: var(--card); border: 1px solid var(--border); transition: transform 0.15s ease; }
+.footer-social a:hover { transform: translateY(-2px); }
+.footer-social svg { width: 18px; height: 18px; }
+.copyright { color: var(--muted); font-size: 0.85rem; }
+.copy-gap { display: inline-block; width: 28px; }
+.app4we { color: var(--text); font-weight: 700; text-decoration: none; }
+.app4we:hover { text-decoration: underline; }
+.app4we .four { color: var(--blue); }
