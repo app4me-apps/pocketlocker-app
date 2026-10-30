@@ -3,15 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pocket Locker — File, Password &amp; Photo Vault in One App | Android &amp; iPhone</title>
-<meta name="description" content="Pocket Locker is a file vault, password manager and private photo vault in one app. Store Aadhaar, PAN, RC, insurance and bank details, scan and auto-fill documents, generate passwords, hide private photos and get expiry reminders — encrypted, offline, no account. Available in India on Android and iPhone.">
+<title>Pocket Locker — Password Manager, 2FA Authenticator &amp; Document Vault in One App</title>
+<meta name="description" content="Pocket Locker is a password manager with autofill and 2FA authenticator, a document vault and a private photo vault in one offline app. Store IDs, insurance and bank details, scan and auto-fill documents, import passwords from other apps and get expiry reminders — encrypted, no account, no ads.">
 <link rel="canonical" href="https://pocketlocker.app/">
 <meta name="author" content="App4We (https://app4we.com)">
 <meta name="theme-color" content="#0052FD">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Pocket Locker">
 <meta property="og:title" content="Pocket Locker — File, Password &amp; Photo Vault in One App">
-<meta property="og:description" content="Your documents, passwords and private photos in one locked, offline vault. Scan, auto-fill, expiry reminders, password generator and a PIN-locked Private Gallery.">
+<meta property="og:description" content="Passwords with autofill and 2FA codes, documents with expiry reminders, and private photos — one locked, offline vault.">
 <meta property="og:url" content="https://pocketlocker.app/">
 <meta property="og:image" content="https://pocketlocker.app/poster-pocketlocker.webp">
 <meta name="twitter:card" content="summary_large_image">
@@ -20,7 +20,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="preload" as="image" href="images/ui-home.webp">
+<link rel="preload" as="image" href="images/ui-home-v2.webp">
 
 <script type="application/ld+json">
 {
@@ -30,7 +30,7 @@
   "operatingSystem": "Android, iOS",
   "applicationCategory": "UtilitiesApplication",
   "alternateName": "Pocket Locker – File, Password & Photo Vault",
-  "description": "File vault, password manager and private photo vault in one app. Private vault for documents, IDs, passwords, bank details, notes and private photos. Scan, auto-fill from photos and PDFs, expiry reminders, password generator and a PIN-locked Private Gallery. AES-256 encrypted on your phone, no account, no ads.",
+  "description": "File vault, password manager with autofill and 2FA authenticator, and private photo vault in one app. Private vault for documents, IDs, passwords, bank details, notes and private photos. Scan, auto-fill from photos and PDFs, expiry reminders, password generator and a PIN-locked Private Gallery. AES-256 encrypted on your phone, no account, no ads.",
   "countriesSupported": "IN",
   "url": "https://pocketlocker.app/",
   "image": "https://pocketlocker.app/poster-pocketlocker.webp",
@@ -330,6 +330,15 @@
   .gallery .phone img { border-radius: 26px; }
   .gallery figcaption { text-align: center; color: var(--muted); font-size: 0.92rem; font-weight: 500; margin-top: 14px; }
 
+  /* ---------- Promo strip ---------- */
+  .promo { display: flex; gap: 18px; overflow-x: auto; padding: 6px 4px 22px; scroll-snap-type: x mandatory; }
+  .promo::-webkit-scrollbar { height: 8px; }
+  .promo::-webkit-scrollbar-thumb { background: #C7D2E5; border-radius: 8px; }
+  .promo figure { margin: 0; flex: 0 0 300px; scroll-snap-align: start; }
+  .promo img { width: 100%; height: auto; border-radius: 22px; border: 1px solid var(--border); box-shadow: var(--shadow); background: #F3F7FF; }
+  .promo figcaption { text-align: center; color: var(--muted); font-size: 0.9rem; font-weight: 500; margin-top: 10px; }
+  @media (max-width: 520px) { .promo figure { flex-basis: 78%; } }
+
   /* ---------- Pricing ---------- */
   .plans { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; max-width: 860px; margin: 0 auto; }
   @media (max-width: 720px) { .plans { grid-template-columns: 1fr; } }
@@ -437,9 +446,9 @@
 <section class="hero">
   <div class="wrap">
     <div>
-      <a class="new-pill" href="#private-gallery"><span class="tag">NEW</span> Private Gallery, Share to Pocket Locker &amp; PDF auto-fill →</a>
+      <a class="new-pill" href="#passwords-2fa"><span class="tag">NEW</span> Password Autofill, 2FA Authenticator &amp; Password Health →</a>
       <h1>Every important document.<br><span class="grad-text">Locked in your pocket.</span></h1>
-      <p class="lede">Your <b>file manager</b>, <b>password manager</b> and <b>photo vault</b> — together in one private app. Scan documents, let auto-fill do the typing, and get reminded before anything expires. Encrypted and offline on your phone.</p>
+      <p class="lede">Your <b>file manager</b>, <b>password manager</b> and <b>photo vault</b> — together in one private app. Save documents with auto-fill, fill passwords and 2FA codes anywhere, and get reminded before anything expires. Encrypted and offline on your phone.</p>
       <div class="btn-row">
         <a class="btn btn-dark" href="https://apps.apple.com/in/app/pocket-locker-private-vault/id6813628223" target="_blank" rel="noopener">
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8.03-.02 2.1-1.14 4.19-.98 2.31.19 3.98 1.35 4.36 3.28-3.4.99-3.29 5.34-.42 6.98-.95.99-2.16 1.99-3.21 2.89z"/><path d="M12.15 6.85c-.24-2.05 1.5-4.28 3.36-4.85.28 2.09-1.68 4.7-3.36 4.85z"/></svg>
@@ -456,13 +465,13 @@
         <span>No account, no ads</span>
         <span>Fingerprint &amp; face unlock</span>
       </div>
-      <div class="region-note"><span class="in-flag" aria-hidden="true"></span> <span><b>Available in India</b> · coming to more countries soon</span></div>
+      <div class="region-note"><span class="in-flag" aria-hidden="true"></span> <span><b>Available in India</b> · coming soon to 13 more countries</span></div>
     </div>
     <div class="hero-visual">
-      <div class="phone ph-back"><img src="images/ui-vehicle-detail.webp" alt="Car insurance details with Copy All and Renew Document" width="640" height="1304"></div>
-      <div class="phone ph-front"><img src="images/ui-home.webp" alt="Pocket Locker home: Scan Document, Auto Fill, Expiring Soon and 7 categories" width="640" height="1288" fetchpriority="high"></div>
+      <div class="phone ph-back"><img src="images/ui-2fa.webp" alt="Gmail login with a live 2FA code" width="640" height="1298"></div>
+      <div class="phone ph-front"><img src="images/ui-home-v2.webp" alt="Pocket Locker home: My Vault with Scan Document, Auto Fill and 7 categories" width="640" height="1311" fetchpriority="high"></div>
       <div class="float-chip chip-expiry"><span class="dot">⏰</span><span>Car insurance<small>Expires in 3 days · 9:00 AM</small></span></div>
-      <div class="float-chip chip-enc"><span class="dot">🔐</span><span>AES-256<small>Encrypted on this phone</small></span></div>
+      <div class="float-chip chip-enc"><span class="dot">🔐</span><span>2FA code 304 145<small>Works offline · tap to copy</small></span></div>
       <div class="hero-poloshi"><img src="poloshi-wave.webp" alt="Poloshi, the Pocket Locker mascot, waving" width="640" height="596"></div>
       <div class="speech">Hi, I'm Poloshi! 👋</div>
     </div>
@@ -494,17 +503,17 @@
         <div class="v-ic">🔑</div>
         <span class="v-kicker">Password Manager</span>
         <h3>Password Vault</h3>
-        <p>Logins, PINs and bank details — encrypted, never forgotten.</p>
+        <p>Logins, 2FA codes and bank details — filled for you, never forgotten.</p>
         <ul class="ticks">
-          <li>Website and app logins, Wi-Fi, PINs</li>
-          <li>Bank accounts, IFSC, UPI ID and card details</li>
-          <li>Password generator, Show large and change-by reminders</li>
+          <li>Password Autofill in other apps &amp; websites</li>
+          <li>Built-in 2FA authenticator, fully offline</li>
+          <li>Password Health, generator &amp; import from other apps</li>
         </ul>
         <a class="v-link" href="features.html#password-vault">See Password Vault features →</a>
       </div>
       <div class="vault v-photo">
         <div class="v-ic">🖼️</div>
-        <span class="v-kicker">Photo Manager · Premium</span>
+        <span class="v-kicker">Photo Manager</span>
         <h3>Photo Vault</h3>
         <p>Private photos out of your gallery and behind a second lock.</p>
         <ul class="ticks">
@@ -524,12 +533,12 @@
   <div class="wrap">
     <p class="version-line"><b>Fresh in Pocket Locker</b> · new ways to keep life sorted</p>
     <div class="new-grid">
-      <div class="new-card"><div class="ic pro">🖼️</div><div><h3>Private Gallery <span class="badge badge-pro">PREMIUM</span></h3><p>Move private photos out of your phone's gallery into albums inside the vault — with an extra PIN.</p></div></div>
-      <div class="new-card"><div class="ic">📤</div><div><h3>Share to Pocket Locker</h3><p>Got a policy on WhatsApp or email? Tap Share › Pocket Locker and save up to 5 files at once.</p></div></div>
-      <div class="new-card"><div class="ic">📄</div><div><h3>PDF auto-fill</h3><p>Auto-fill now reads e-policies and e-tickets too — not just photos and scans.</p></div></div>
-      <div class="new-card"><div class="ic">🗂️</div><div><h3>My Files</h3><p>Every photo and PDF you've saved in one grid. Filter by type or category, search by name.</p></div></div>
-      <div class="new-card"><div class="ic">🔠</div><div><h3>Show large</h3><p>See a password in big numbered boxes, so typing it on a laptop or TV is easy.</p></div></div>
-      <div class="new-card"><div class="ic">⭐</div><div><h3>Star what matters</h3><p>Star a document and it stays at the top of its lists.</p></div></div>
+      <div class="new-card"><div class="ic pro">🔓</div><div><h3>Password Autofill</h3><p>Your saved logins appear above the keyboard in other apps and websites — one fingerprint and you're in.</p></div></div>
+      <div class="new-card"><div class="ic pro">🔢</div><div><h3>2FA Authenticator</h3><p>Scan a QR code and get live 6-digit codes, right next to the login — fully offline.</p></div></div>
+      <div class="new-card"><div class="ic">💯</div><div><h3>Password Health</h3><p>A score out of 100 that finds weak, reused and old passwords, so you know what to fix first.</p></div></div>
+      <div class="new-card"><div class="ic pro">📥</div><div><h3>Import &amp; Export</h3><p>Bring passwords from Google, Bitwarden, LastPass or 1Password, fill many documents from Excel, and export a password-locked ZIP.</p></div></div>
+      <div class="new-card"><div class="ic">🕑</div><div><h3>Password history</h3><p>Changed a password by mistake? See the last 5 for every login and restore one in a tap.</p></div></div>
+      <div class="new-card"><div class="ic">🛡️</div><div><h3>Backup PIN</h3><p>Lock your Google Drive backup with a 6-digit PIN, so only you can restore your vault.</p></div></div>
     </div>
   </div>
 </section>
@@ -546,7 +555,7 @@
     <!-- Scan + Auto-fill -->
     <div class="feature-row">
       <div class="text">
-        <span class="eyebrow">Scan &amp; Auto-fill <span class="badge badge-free">FREE</span></span>
+        <span class="eyebrow">Scan &amp; Auto-fill</span>
         <h3>Scan it once. Auto-fill does the typing.</h3>
         <p>Point your camera at an RC book, policy or ID card. Pocket Locker finds the edges, straightens and cleans the page, then reads the numbers, names and dates for you to check.</p>
         <ul class="ticks">
@@ -576,8 +585,9 @@
           <li>Quick Fill Types fill the title in one tap — RC Book, Insurance, or your own</li>
           <li>Rename the first three fields for one entry — “Title” becomes “Policy Name”</li>
           <li>Star important documents to keep them at the top</li>
-          <li>Move any document to another folder or category</li>
-          <li>Make your own categories — Medical, Property, Pets — with one of 5 forms, including Gallery <span class="badge badge-pro">PREMIUM</span></li>
+          <li>Move any document to another folder — or a brand-new one — without re-typing</li>
+          <li>Star a photo icon to reuse it on related items in one tap</li>
+          <li>Make your own categories — Medical, Property, Pets — with one of 5 forms, including Gallery</li>
         </ul>
       </div>
       <div class="shot-stage duo">
@@ -594,35 +604,55 @@
         <p>Choose 7 or 30 days before any expiry date and a reminder arrives at 9:00 AM — every day from a week before until it's due. Tap the notification and the document opens.</p>
         <ul class="ticks">
           <li>“Expiring soon” on Home and a Reminders tab for the next 30 days</li>
-          <li>Tap <b>Renew</b> — the new date is saved, old dates go into history</li>
+          <li>Tap <b>Renew</b> — the new date and amount are saved, old ones go into history</li>
           <li>Clear notifications like “Car insurance · Vehicle” — tap to open it</li>
           <li>Bank card expiry and “change this password by” reminders</li>
           <li>A gentle Saturday-evening nudge to save one more document — turn it off any time</li>
-          <li>Custom date &amp; time reminders, including Notes <span class="badge badge-pro">PREMIUM</span></li>
-        </ul>
-      </div>
-      <div class="shot-stage">
-        <div class="phone"><img src="images/ui-vehicle-detail.webp" alt="Vehicle document with 1 day left, Renew Document and Copy All" width="640" height="1304" loading="lazy"></div>
-      </div>
-    </div>
-
-    <!-- Generator -->
-    <div class="feature-row reverse">
-      <div class="text">
-        <span class="eyebrow">New · Password Generator <span class="badge badge-free">FREE</span></span>
-        <h3>Strong passwords, made on your phone.</h3>
-        <p>Open the Generator tab, or tap the key button beside any Password field. Pick the length and characters — Pocket Locker does the rest.</p>
-        <ul class="ticks">
-          <li>6 to 40 characters: upper, lower, numbers and symbols</li>
-          <li>Avoid look-alike characters like 0 / O and 1 / l</li>
-          <li>Strength meter, plus an encrypted history of the last 50</li>
-          <li><b>Show large</b>: big numbered boxes in groups of 4, digits and symbols coloured</li>
-          <li>On Android, a copied password is cleared from the clipboard after 60 seconds</li>
+          <li>Custom date &amp; time reminders, including Notes</li>
         </ul>
       </div>
       <div class="shot-stage duo">
-        <div class="phone"><img src="images/ui-generator.webp" alt="Password Generator with length slider, character options and strength meter" width="640" height="1300" loading="lazy"></div>
-        <div class="phone"><img src="images/ui-password-form.webp" alt="Add password form with the generator key button beside the Password field" width="640" height="1308" loading="lazy"></div>
+        <div class="phone"><img src="images/ui-insurance-detail.webp" alt="Car insurance with 3 days left, attachments and Renew Document" width="640" height="1352" loading="lazy"></div>
+        <div class="phone"><img src="images/ui-renew.webp" alt="Renew document sheet with new expiry date and amount" width="640" height="1433" loading="lazy"></div>
+      </div>
+    </div>
+
+    <!-- Passwords & 2FA -->
+    <div class="feature-row reverse" id="passwords-2fa">
+      <div class="text">
+        <span class="eyebrow">New · Passwords &amp; 2FA</span>
+        <h3>Your logins and 2FA codes, filled for you.</h3>
+        <p>Pocket Locker now fills your saved logins in other apps and websites, keeps your two-step verification codes, and makes strong passwords as you sign up — all on your phone, all offline.</p>
+        <ul class="ticks">
+          <li><b>Password Autofill</b> on Android &amp; iPhone — only the logins that match that app or site, after fingerprint or Face ID</li>
+          <li><b>Authenticator</b>: scan a QR code, choose a screenshot or type the key — live 6-digit codes, tap to copy</li>
+          <li>Signing up? “Use a strong password” fills one and offers to save the login</li>
+          <li>Generator makes passwords, easy passphrases like <i>Toast-Turtle4-Cake-Wolf</i>, or private usernames</li>
+          <li><b>Show large</b>: big numbered boxes for typing a password on a TV or laptop</li>
+        </ul>
+      </div>
+      <div class="shot-stage duo">
+        <div class="phone"><img src="images/ui-generator-tools.webp" alt="Generator tab with Password Autofill on, Password Health 100 and Authenticator" width="640" height="1311" loading="lazy"></div>
+        <div class="phone"><img src="images/ui-2fa.webp" alt="Gmail login showing a live 2FA code" width="640" height="1298" loading="lazy"></div>
+      </div>
+    </div>
+
+    <!-- Password Health -->
+    <div class="feature-row">
+      <div class="text">
+        <span class="eyebrow">New · Password Health</span>
+        <h3>Know exactly which passwords to fix.</h3>
+        <p>Password Health checks every login for weak, reused and old passwords and gives you a score out of 100. A weak login says so right on its page, with a one-tap Update.</p>
+        <ul class="ticks">
+          <li>See exactly which logins are weak, reused or old — and fix them first</li>
+          <li>Spots the same password used on 2 or more accounts</li>
+          <li><b>Password history</b>: the last 5 passwords of every login, with dates — restore one after fingerprint or Face ID</li>
+          <li><b>Import</b> your passwords from Google Password Manager, Chrome, Bitwarden, LastPass, 1Password or Firefox — 2FA keys too</li>
+        </ul>
+      </div>
+      <div class="shot-stage duo">
+        <div class="phone"><img src="images/ui-password-health.webp" alt="Password Health score 74 with weak and reused passwords" width="640" height="1307" loading="lazy"></div>
+        <div class="phone"><img src="images/ui-login-health.webp" alt="Facebook login showing Weak password Update and 2-step verification" width="640" height="1302" loading="lazy"></div>
       </div>
     </div>
 
@@ -652,7 +682,7 @@
 <section id="private-gallery" class="pg">
   <div class="wrap pg-panel">
     <div>
-      <span class="eyebrow">New · Private Gallery <span class="badge badge-pro">PREMIUM</span></span>
+      <span class="eyebrow">New · Private Gallery</span>
       <h2>Private photos, out of your gallery and into your vault.</h2>
       <p class="lead">Create a Gallery category, add albums like Family or Private, and move photos in a few taps. They're then only in Pocket Locker — behind your phone's lock and an extra 4-digit PIN.</p>
       <ul class="ticks">
@@ -690,7 +720,7 @@
       <div class="cat"><div class="hd"><span class="em">🛡️</span><h3>Warranty</h3></div><p>Warranty cards and purchase bills for every gadget and appliance.</p><p class="extra">Reminded before the warranty ends</p></div>
       <div class="cat"><div class="hd"><span class="em">🎓</span><h3>Certificate</h3></div><p>Degrees, marksheets and course certificates.</p><p class="extra">Multi-page scan as one PDF</p></div>
       <div class="cat"><div class="hd"><span class="em">🏦</span><h3>Bank</h3></div><p>Account number, IFSC, branch, UPI ID, card number and expiry, netbanking ID.</p><p class="extra">Card expiry reminder · Copy All</p></div>
-      <div class="cat custom"><div class="hd"><span class="em">➕</span><h3>Your own <span class="badge badge-pro">PREMIUM</span></h3></div><p>Medical, Property, Pets — any category you need, with your own icon. Or a PIN-locked Private Gallery.</p><p class="extra">Choose from 5 form types</p></div>
+      <div class="cat custom"><div class="hd"><span class="em">➕</span><h3>Your own</h3></div><p>Medical, Property, Pets — any category you need, with your own icon. Or a PIN-locked Private Gallery.</p><p class="extra">Choose from 5 form types</p></div>
     </div>
   </div>
 </section>
@@ -707,14 +737,14 @@
       </div>
     </div>
     <div class="also">
-      <div class="also-item"><div class="ic">🔐</div><h3>AES-256 on your phone</h3><p>Titles, numbers, notes and passwords are encrypted before they're saved. Photos and PDFs stay in the app's private storage.</p></div>
+      <div class="also-item"><div class="ic">🔐</div><h3>AES-256 on your phone</h3><p>Titles, numbers, notes, passwords and 2FA keys are encrypted before they're saved. Photos and PDFs stay in the app's private storage.</p></div>
       <div class="also-item"><div class="ic">👆</div><h3>App Lock &amp; auto-lock</h3><p>Opens with fingerprint, face unlock or screen lock. Locks again immediately, after 1, 5 or 10 minutes — your choice.</p></div>
       <div class="also-item"><div class="ic">📴</div><h3>Fully offline</h3><p>View, add and search everything with no internet at all.</p></div>
       <div class="also-item"><div class="ic">☁️</div><h3>Backup to your Drive</h3><p>A private app folder only Pocket Locker can open. Auto Backup after each change; restore on a new phone — even Android ↔ iPhone.</p></div>
-      <div class="also-item"><div class="ic">🔄</div><h3>Sync status at a glance</h3><p>The Sync button shows changes waiting for backup, and the Backup page lists any file that couldn't be saved.</p></div>
+      <div class="also-item"><div class="ic">🛡️</div><h3>Backup PIN</h3><p>An optional 6-digit PIN locks your Drive backup — even someone in your Google account can't restore your vault.</p></div>
       <div class="also-item"><div class="ic">🗑️</div><h3>30-day Trash</h3><p>Deleted something by mistake? Restore it any time within 30 days.</p></div>
-      <div class="also-item"><div class="ic">📦</div><h3>Download Reports <span class="badge badge-pro">PREMIUM</span></h3><p>A ZIP of the categories you choose — every document's details plus its photos and PDFs.</p></div>
-      <div class="also-item"><div class="ic">⚡</div><h3>Home-screen shortcuts</h3><p>Long-press the app icon for New Note and My Notes.</p></div>
+      <div class="also-item"><div class="ic">📦</div><h3>Import &amp; Export</h3><p>Fill many entries from Excel, and export everything as one password-locked (AES-256) ZIP you can keep on a laptop.</p></div>
+      <div class="also-item"><div class="ic">🌍</div><h3>Made for your country</h3><p>Bank forms and vehicle documents match where you live — IFSC and RC Book in India, Sort Code and MOT in the UK, IBAN and Mulkiya in the UAE, and more.</p></div>
       <div class="also-item"><div class="ic">🌗</div><h3>Light &amp; Dark mode</h3><p>Light, Dark or follow your phone's setting.</p></div>
     </div>
   </div>
@@ -729,12 +759,33 @@
       <p>No clutter — just your documents, organised clearly.</p>
     </div>
     <div class="gallery">
-      <figure><div class="phone"><img src="images/ui-home.webp" alt="Home screen" width="640" height="1288" loading="lazy"></div><figcaption>Your whole vault at a glance</figcaption></figure>
+      <figure><div class="phone"><img src="images/ui-home-v2.webp" alt="Home screen" width="640" height="1311" loading="lazy"></div><figcaption>Your whole vault at a glance</figcaption></figure>
+      <figure><div class="phone"><img src="images/ui-generator-tools.webp" alt="Generator with Autofill, Health and Authenticator" width="640" height="1311" loading="lazy"></div><figcaption>All password tools in one tab</figcaption></figure>
+      <figure><div class="phone"><img src="images/ui-2fa.webp" alt="Login with 2FA code" width="640" height="1298" loading="lazy"></div><figcaption>2FA codes next to the login</figcaption></figure>
+      <figure><div class="phone"><img src="images/ui-password-health.webp" alt="Password Health" width="640" height="1307" loading="lazy"></div><figcaption>Password Health score</figcaption></figure>
+      <figure><div class="phone"><img src="images/ui-insurance-detail.webp" alt="Insurance document details" width="640" height="1352" loading="lazy"></div><figcaption>Expiry, attachments &amp; renew</figcaption></figure>
       <figure><div class="phone"><img src="images/ui-add-note.webp" alt="Scan and auto-fill when adding" width="640" height="1294" loading="lazy"></div><figcaption>Scan it — auto-fill types it</figcaption></figure>
-      <figure><div class="phone"><img src="images/ui-vehicle-detail.webp" alt="Vehicle document details" width="640" height="1304" loading="lazy"></div><figcaption>Expiry, renew &amp; Copy All</figcaption></figure>
-      <figure><div class="phone"><img src="images/ui-generator.webp" alt="Password Generator" width="640" height="1300" loading="lazy"></div><figcaption>Password Generator</figcaption></figure>
-      <figure><div class="phone"><img src="images/ui-password-detail.webp" alt="Saved login details" width="640" height="1299" loading="lazy"></div><figcaption>Passwords hidden until you tap</figcaption></figure>
-      <figure><div class="phone"><img src="images/ui-custom-category.webp" alt="New custom category with Gallery type" width="640" height="1345" loading="lazy"></div><figcaption>Your own categories</figcaption></figure>
+      <figure><div class="phone"><img src="images/ui-new-gallery.webp" alt="New Gallery category" width="640" height="1296" loading="lazy"></div><figcaption>Private Gallery &amp; your own categories</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ IN ACTION ============ -->
+<section id="in-action">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">See it in action</span>
+      <h2>Everything Pocket Locker does, at a glance</h2>
+      <p>Swipe through documents, passwords, 2FA codes and private photos — all in one app.</p>
+    </div>
+    <div class="promo">
+      <figure><img src="images/promo-overview.webp" alt="Your important information, one private vault" width="720" height="1280" loading="lazy"><figcaption>One private vault</figcaption></figure>
+      <figure><img src="images/promo-passwords.webp" alt="Passwords made easy: save, generate and auto-fill anywhere" width="720" height="1279" loading="lazy"><figcaption>Passwords, autofill &amp; 2FA</figcaption></figure>
+      <figure><img src="images/promo-documents.webp" alt="Keep important documents safe and organised" width="720" height="1279" loading="lazy"><figcaption>Documents &amp; reminders</figcaption></figure>
+      <figure><img src="images/promo-private-photos.webp" alt="Keep your private photos safe" width="720" height="1280" loading="lazy"><figcaption>Private Gallery</figcaption></figure>
+      <figure><img src="images/promo-find.webp" alt="Find all your documents easily" width="720" height="1280" loading="lazy"><figcaption>Search &amp; filters</figcaption></figure>
+      <figure><img src="images/promo-categories.webp" alt="Organise everything with categories" width="720" height="1080" loading="lazy"><figcaption>Categories &amp; folders</figcaption></figure>
+      <figure><img src="images/promo-all-in-one.webp" alt="All your important things in one safe place" width="720" height="1080" loading="lazy"><figcaption>Everything in one place</figcaption></figure>
     </div>
   </div>
 </section>
@@ -770,7 +821,7 @@
     <div class="section-head">
       <span class="eyebrow">Pricing</span>
       <h2>Free to start. Premium when you need more.</h2>
-      <p>The scanner, auto-fill, password generator and backup are free for everyone.</p>
+      <p>The scanner, auto-fill, password generator, Password Health score and backup are free for everyone.</p>
     </div>
     <div class="plans">
       <div class="plan">
@@ -782,8 +833,9 @@
           <li>All 7 categories, with folders</li>
           <li>Scanner, Auto-fill (photos &amp; PDFs) &amp; Password Generator</li>
           <li>Share to Pocket Locker, My Files &amp; PDF viewer</li>
+          <li>Password Health score &amp; password history</li>
           <li>One expiry reminder per document (7 or 30 days)</li>
-          <li>Google Drive backup &amp; restore</li>
+          <li>Google Drive backup, restore &amp; Backup PIN</li>
           <li>Email support</li>
         </ul>
       </div>
@@ -797,13 +849,15 @@
           <li>Unlimited custom categories</li>
           <li>Several reminders per document</li>
           <li>Custom date &amp; time reminders, including Notes</li>
+          <li>Password Autofill &amp; 2FA Authenticator</li>
+          <li>Password Health details — what to fix</li>
           <li>Private Gallery with albums &amp; PIN lock</li>
-          <li>Download Reports as a ZIP</li>
+          <li>Import &amp; Export (Excel, CSV, locked ZIP)</li>
           <li>Priority support</li>
         </ul>
       </div>
     </div>
-    <p class="plan-note">Premium is a yearly subscription that renews until you cancel in Google Play or the App Store. Premium comes from your store account — use Restore Purchases on a new phone. Pocket Locker is currently available in India; more countries are coming soon.</p>
+    <p class="plan-note">Premium is a yearly subscription that renews until you cancel in Google Play or the App Store. Premium comes from your store account — use Restore Purchases on a new phone. Prices shown are for India; other countries see their local price in the store. Pocket Locker is currently available in India and coming soon to the UK, Ireland, the US, Canada, Australia, New Zealand, Singapore, the UAE, Saudi Arabia, Qatar, Oman, Kuwait and Bahrain.</p>
   </div>
 </section>
 
@@ -837,7 +891,15 @@
       </details>
       <details>
         <summary>Is Pocket Locker available in my country?</summary>
-        <p>Right now Pocket Locker is available in India, on Google Play and the App Store. We're working on bringing it to more countries soon — follow us on Instagram or YouTube for launch news.</p>
+        <p>Right now Pocket Locker is available in India, on Google Play and the App Store. It's coming soon to 13 more countries: the UK, Ireland, the US, Canada, Australia, New Zealand, Singapore, the UAE, Saudi Arabia, Qatar, Oman, Kuwait and Bahrain — with bank forms, vehicle documents and currency made for each country. Follow us on Instagram or YouTube for launch news.</p>
+      </details>
+      <details>
+        <summary>Can Pocket Locker fill my passwords and 2FA codes?</summary>
+        <p>Yes, with Premium. Password Autofill shows your matching saved logins above the keyboard in other apps and websites on Android and iPhone, after your fingerprint or Face ID. The built-in Authenticator keeps your 2FA codes next to each login and works fully offline.</p>
+      </details>
+      <details>
+        <summary>Can I move my passwords from another app?</summary>
+        <p>Yes, with Premium. Import a CSV from Google Password Manager / Chrome, Bitwarden, LastPass, 1Password or Firefox — including 2FA keys when the file has them. You see a preview before anything is saved.</p>
       </details>
       <details>
         <summary>What is Private Gallery?</summary>
@@ -910,7 +972,7 @@
       </a>
     </div>
     <div class="copy"><span>© <span id="year">2026</span> App4We</span><span>Built with care by <a class="app4we strong" href="https://app4we.com" target="_blank" rel="noopener">App<span class="four">4</span>We</a></span></div>
-    <p class="disclaimer">Currently available in India — more countries coming soon. Pocket Locker keeps your own copies organised. Stored copies are for your reference and are not official documents.</p>
+    <p class="disclaimer">Currently available in India — coming soon to 13 more countries. Pocket Locker keeps your own copies organised. Stored copies are for your reference and are not official documents.</p>
   </div>
 </footer>
 
