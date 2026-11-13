@@ -3,15 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pocket Locker — Password Manager, 2FA Authenticator &amp; Document Vault in One App</title>
-<meta name="description" content="Pocket Locker is a password manager with autofill and 2FA authenticator, a document vault and a private photo vault in one offline app. Store IDs, insurance and bank details, scan and auto-fill documents, import passwords from other apps and get expiry reminders — encrypted, no account, no ads.">
+<title>Pocket Locker — Documents, Passwords, Payments, Wealth &amp; Health in One Private Vault</title>
+<meta name="description" content="Pocket Locker keeps your documents, passwords and 2FA codes, payments and EMIs, investments, the family's health records and private photos in one locked, offline vault — with reminders before anything expires or falls due. No account, no ads. Free on Android and iPhone.">
 <link rel="canonical" href="https://pocketlocker.app/">
 <meta name="author" content="App4We (https://app4we.com)">
 <meta name="theme-color" content="#0052FD">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Pocket Locker">
-<meta property="og:title" content="Pocket Locker — File, Password &amp; Photo Vault in One App">
-<meta property="og:description" content="Passwords with autofill and 2FA codes, documents with expiry reminders, and private photos — one locked, offline vault.">
+<meta property="og:title" content="Pocket Locker — Your whole life admin in one private vault">
+<meta property="og:description" content="Documents, passwords, payments, wealth, health records and private photos — one locked, offline vault with reminders.">
 <meta property="og:url" content="https://pocketlocker.app/">
 <meta property="og:image" content="https://pocketlocker.app/poster-pocketlocker.webp">
 <meta name="twitter:card" content="summary_large_image">
@@ -20,7 +20,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="preload" as="image" href="images/ui-home-v2.webp">
+<link rel="preload" as="image" href="images/ui-home-v3.webp">
 
 <script type="application/ld+json">
 {
@@ -30,8 +30,8 @@
   "operatingSystem": "Android, iOS",
   "applicationCategory": "UtilitiesApplication",
   "alternateName": "Pocket Locker – File, Password & Photo Vault",
-  "description": "File vault, password manager with autofill and 2FA authenticator, and private photo vault in one app. Private vault for documents, IDs, passwords, bank details, notes and private photos. Scan, auto-fill from photos and PDFs, expiry reminders, password generator and a PIN-locked Private Gallery. AES-256 encrypted on your phone, no account, no ads.",
-  "countriesSupported": "IN",
+  "description": "Document vault, password manager with autofill and 2FA, payment and EMI tracker, wealth tracker, family health records and private photo vault in one offline app. Private vault for documents, IDs, passwords, bank details, notes and private photos. Scan, auto-fill from photos and PDFs, expiry reminders, password generator and a PIN-locked Private Gallery. AES-256 encrypted on your phone, no account, no ads.",
+  "countriesSupported": ["IN","GB","US","CA","AU","NZ","SG","AE","SA","QA"],
   "url": "https://pocketlocker.app/",
   "image": "https://pocketlocker.app/poster-pocketlocker.webp",
   "offers": [
@@ -254,6 +254,10 @@
   .v-file { --vc: linear-gradient(90deg, #07CCFD, #0052FD); --vbg: #E6F0FF; --vt: #0052FD; }
   .v-pass { --vc: linear-gradient(90deg, #22C55E, #15803D); --vbg: #E7F8EE; --vt: #15803D; }
   .v-photo { --vc: linear-gradient(90deg, #A855F7, #6D28D9); --vbg: #F1E8FF; --vt: #6D28D9; }
+  .v-pay { --vc: linear-gradient(90deg, #FB923C, #EA580C); --vbg: #FFEDD5; --vt: #C2410C; }
+  .v-wealth { --vc: linear-gradient(90deg, #F472B6, #DB2777); --vbg: #FCE7F3; --vt: #BE185D; }
+  .v-health { --vc: linear-gradient(90deg, #2DD4BF, #0F766E); --vbg: #CCFBF1; --vt: #0F766E; }
+  @media (max-width: 960px) and (min-width: 641px) { .vaults { grid-template-columns: 1fr 1fr; max-width: none; } }
   .vaults-plus { text-align: center; margin: 28px auto 0; color: var(--muted); max-width: 760px; }
   .vaults-plus b { color: var(--text); }
   .btn-outline { display: inline-flex; align-items: center; gap: 8px; margin-top: 16px; padding: 12px 20px; border-radius: 12px; border: 1.5px solid var(--blue); color: var(--blue); font-weight: 600; text-decoration: none; }
@@ -294,6 +298,7 @@
   /* ---------- Categories ---------- */
   .cats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
   @media (max-width: 960px) { .cats { grid-template-columns: repeat(2, 1fr); } }
+  @media (min-width: 961px) { .cats { grid-template-columns: repeat(5, 1fr); } }
   @media (max-width: 540px) { .cats { grid-template-columns: 1fr; } }
   .cat { background: var(--card); border: 1px solid var(--border); border-radius: 18px; padding: 20px; box-shadow: var(--shadow); }
   .cat .hd { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
@@ -428,7 +433,7 @@
       Pocket Locker
     </a>
     <nav class="nav" aria-label="Main">
-      <a href="#vaults">3 Vaults</a>
+      <a href="#vaults">Vaults</a>
       <a href="features.html">All Features</a>
       <a href="#screens">Screens</a>
       <a href="#pricing">Pricing</a>
@@ -446,9 +451,9 @@
 <section class="hero">
   <div class="wrap">
     <div>
-      <a class="new-pill" href="#passwords-2fa"><span class="tag">NEW</span> Password Autofill, 2FA Authenticator &amp; Password Health →</a>
-      <h1>Every important document.<br><span class="grad-text">Locked in your pocket.</span></h1>
-      <p class="lede">Your <b>file manager</b>, <b>password manager</b> and <b>photo vault</b> — together in one private app. Save documents with auto-fill, fill passwords and 2FA codes anywhere, and get reminded before anything expires. Encrypted and offline on your phone.</p>
+      <a class="new-pill" href="#money"><span class="tag">NEW</span> Payments, Wealth &amp; family Health records →</a>
+      <h1>Your life's important things.<br><span class="grad-text">Locked in your pocket.</span></h1>
+      <p class="lede">Documents, passwords and 2FA codes, payments and EMIs, investments, the family's health records and private photos — in one locked, offline vault, with reminders before anything expires or falls due.</p>
       <div class="btn-row">
         <a class="btn btn-dark" href="https://apps.apple.com/in/app/pocket-locker-private-vault/id6813628223" target="_blank" rel="noopener">
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8.03-.02 2.1-1.14 4.19-.98 2.31.19 3.98 1.35 4.36 3.28-3.4.99-3.29 5.34-.42 6.98-.95.99-2.16 1.99-3.21 2.89z"/><path d="M12.15 6.85c-.24-2.05 1.5-4.28 3.36-4.85.28 2.09-1.68 4.7-3.36 4.85z"/></svg>
@@ -465,66 +470,102 @@
         <span>No account, no ads</span>
         <span>Fingerprint &amp; face unlock</span>
       </div>
-      <div class="region-note"><span class="in-flag" aria-hidden="true"></span> <span><b>Available in India</b> · coming soon to 13 more countries</span></div>
+      <div class="region-note">🌍 <span><b>Available in 10 countries</b> · more coming soon</span></div>
     </div>
     <div class="hero-visual">
-      <div class="phone ph-back"><img src="images/ui-2fa.webp" alt="Gmail login with a live 2FA code" width="640" height="1298"></div>
-      <div class="phone ph-front"><img src="images/ui-home-v2.webp" alt="Pocket Locker home: My Vault with Scan Document, Auto Fill and 7 categories" width="640" height="1311" fetchpriority="high"></div>
-      <div class="float-chip chip-expiry"><span class="dot">⏰</span><span>Car insurance<small>Expires in 3 days · 9:00 AM</small></span></div>
-      <div class="float-chip chip-enc"><span class="dot">🔐</span><span>2FA code 304 145<small>Works offline · tap to copy</small></span></div>
+      <div class="phone ph-back"><img src="images/ui-payments.webp" alt="Payment page with this month's paid and pending payments by category" width="640" height="1354"></div>
+      <div class="phone ph-front"><img src="images/ui-home-v3.webp" alt="Pocket Locker home with Upcoming, 10 categories and recent documents" width="640" height="1303" fetchpriority="high"></div>
+      <div class="float-chip chip-expiry"><span class="dot">⏰</span><span>EMI of ₹10,461<small>Due in 3 days</small></span></div>
+      <div class="float-chip chip-enc"><span class="dot">🔐</span><span>Fully offline<small>No account · no ads</small></span></div>
       <div class="hero-poloshi"><img src="poloshi-wave.webp" alt="Poloshi, the Pocket Locker mascot, waving" width="640" height="596"></div>
       <div class="speech">Hi, I'm Poloshi! 👋</div>
     </div>
   </div>
 </section>
 
-<!-- ============ THREE VAULTS ============ -->
+<!-- ============ VAULTS ============ -->
 <section id="vaults" class="vaults-sec">
   <div class="wrap">
     <div class="section-head">
-      <span class="eyebrow">3 vaults · 1 app</span>
-      <h2>File manager, password manager and photo vault — finally in one app.</h2>
-      <p>Most people juggle a scanner app, a password manager and a separate app to hide photos. Pocket Locker brings all three together in one private, offline vault that anyone can use.</p>
+      <span class="eyebrow">One app instead of six</span>
+      <h2>Documents, passwords, money and health — finally in one private app.</h2>
+      <p>Most people juggle a scanner app, a password manager, an EMI tracker, an investment sheet, a folder of medical papers and a hidden-photo app. Pocket Locker brings them together in one offline vault that anyone in the family can use.</p>
     </div>
     <div class="vaults">
       <div class="vault v-file">
         <div class="v-ic">📁</div>
         <span class="v-kicker">File Manager</span>
-        <h3>File Vault</h3>
+        <h3>Documents</h3>
         <p>Every important document, organised and ready in one tap.</p>
         <ul class="ticks">
-          <li>Aadhaar, PAN, RC, insurance, warranties, certificates</li>
+          <li>IDs, vehicle papers, insurance, warranties, certificates</li>
           <li>Scan, auto-fill from photos &amp; PDFs, share in from any app</li>
-          <li>Folders, My Files grid and expiry reminders</li>
+          <li>Folders, tags and reminders before anything expires</li>
         </ul>
-        <a class="v-link" href="features.html#file-vault">See File Vault features →</a>
+        <a class="v-link" href="features.html#file-vault">See document features →</a>
       </div>
       <div class="vault v-pass">
         <div class="v-ic">🔑</div>
         <span class="v-kicker">Password Manager</span>
-        <h3>Password Vault</h3>
-        <p>Logins, 2FA codes and bank details — filled for you, never forgotten.</p>
+        <h3>Passwords &amp; 2FA</h3>
+        <p>Logins, 2FA codes and cards — filled for you, never forgotten.</p>
         <ul class="ticks">
           <li>Password Autofill in other apps &amp; websites</li>
           <li>Built-in 2FA authenticator, fully offline</li>
           <li>Password Health, generator &amp; import from other apps</li>
         </ul>
-        <a class="v-link" href="features.html#password-vault">See Password Vault features →</a>
+        <a class="v-link" href="features.html#password-vault">See password features →</a>
+      </div>
+      <div class="vault v-pay">
+        <div class="v-ic">💳</div>
+        <span class="v-kicker">Payment Tracker</span>
+        <h3>Payments</h3>
+        <p>EMIs, rent, bills, subscriptions and premiums — what's paid and what's due.</p>
+        <ul class="ticks">
+          <li>Loan summary: EMIs paid, balance, interest</li>
+          <li>Mark as Paid or Skip, monthly &amp; yearly reports</li>
+          <li>“EMI of ₹10,461 due in 3 days” reminders</li>
+        </ul>
+        <a class="v-link" href="features.html#payments">See payment features →</a>
+      </div>
+      <div class="vault v-wealth">
+        <div class="v-ic">💎</div>
+        <span class="v-kicker">Wealth Tracker</span>
+        <h3>Wealth</h3>
+        <p>Deposits, funds, shares, gold, PF and property — invested, value and profit.</p>
+        <ul class="ticks">
+          <li>FD / RD calculator with maturity amount</li>
+          <li>Income, Update value, Sold / Matured / Closed</li>
+          <li>Reminders before deposits mature</li>
+        </ul>
+        <a class="v-link" href="features.html#wealth">See wealth features →</a>
+      </div>
+      <div class="vault v-health">
+        <div class="v-ic">🩺</div>
+        <span class="v-kicker">Health Records</span>
+        <h3>Health</h3>
+        <p>The whole family's medical papers, person by person.</p>
+        <ul class="ticks">
+          <li>Reports, prescriptions, lab tests, scans, vaccines</li>
+          <li>Baby growth and vaccine schedule</li>
+          <li>Refill, next-visit and next-dose reminders</li>
+        </ul>
+        <a class="v-link" href="features.html#health">See health features →</a>
       </div>
       <div class="vault v-photo">
         <div class="v-ic">🖼️</div>
         <span class="v-kicker">Photo Manager</span>
-        <h3>Photo Vault</h3>
+        <h3>Private Photos</h3>
         <p>Private photos out of your gallery and behind a second lock.</p>
         <ul class="ticks">
           <li>Albums like Family or Private</li>
           <li>Remove from your phone's gallery in one step</li>
           <li>Extra 4-digit PIN, hidden from search</li>
         </ul>
-        <a class="v-link" href="features.html#photo-vault">See Photo Vault features →</a>
+        <a class="v-link" href="features.html#photo-vault">See photo features →</a>
       </div>
     </div>
-    <p class="vaults-plus">Plus <b>expiry reminders</b>, <b>notes</b>, <b>Google Drive backup</b> and <b>app lock</b> — all working offline, with no account and no ads.<br><a class="btn-outline" href="features.html">See every feature and how people use it →</a></p>
+    <p class="vaults-plus">Plus a <b>cards wallet</b>, <b>notes</b>, a <b>home-screen widget</b>, <b>Show in Calendar</b>, <b>Google Drive backup</b> and <b>app lock</b> — all working offline, with no account and no ads.<br><a class="btn-outline" href="features.html">See every feature and how people use it →</a></p>
   </div>
 </section>
 
@@ -533,12 +574,12 @@
   <div class="wrap">
     <p class="version-line"><b>Fresh in Pocket Locker</b> · new ways to keep life sorted</p>
     <div class="new-grid">
-      <div class="new-card"><div class="ic pro">🔓</div><div><h3>Password Autofill</h3><p>Your saved logins appear above the keyboard in other apps and websites — one fingerprint and you're in.</p></div></div>
-      <div class="new-card"><div class="ic pro">🔢</div><div><h3>2FA Authenticator</h3><p>Scan a QR code and get live 6-digit codes, right next to the login — fully offline.</p></div></div>
-      <div class="new-card"><div class="ic">💯</div><div><h3>Password Health</h3><p>A score out of 100 that finds weak, reused and old passwords, so you know what to fix first.</p></div></div>
-      <div class="new-card"><div class="ic pro">📥</div><div><h3>Import &amp; Export</h3><p>Bring passwords from Google, Bitwarden, LastPass or 1Password, fill many documents from Excel, and export a password-locked ZIP.</p></div></div>
-      <div class="new-card"><div class="ic">🕑</div><div><h3>Password history</h3><p>Changed a password by mistake? See the last 5 for every login and restore one in a tap.</p></div></div>
-      <div class="new-card"><div class="ic">🛡️</div><div><h3>Backup PIN</h3><p>Lock your Google Drive backup with a 6-digit PIN, so only you can restore your vault.</p></div></div>
+      <div class="new-card"><div class="ic">🩺</div><div><h3>Health page</h3><p>Each family member's reports, prescriptions, lab tests, scans and vaccines — plus baby growth and the vaccine schedule.</p></div></div>
+      <div class="new-card"><div class="ic">💳</div><div><h3>Payments &amp; plans</h3><p>EMIs, rent, bills and subscriptions with Mark as Paid, loan summaries, Valid till and Renew with Plan History.</p></div></div>
+      <div class="new-card"><div class="ic">💎</div><div><h3>Wealth</h3><p>FD / RD calculator, funds, shares, gold and PF — what you put in, what it's worth and when it matures.</p></div></div>
+      <div class="new-card"><div class="ic">🔗</div><div><h3>Tags</h3><p>Link entries in any category — a card to its bank, a prescription to its doctor, a policy to its vehicle.</p></div></div>
+      <div class="new-card"><div class="ic">🪪</div><div><h3>Cards wallet</h3><p>Credit, debit, forex, loyalty and gift cards with expiry reminders — Renew card keeps the old number in history.</p></div></div>
+      <div class="new-card"><div class="ic">📅</div><div><h3>Widget &amp; Calendar</h3><p>Your next renewals and payments on the home screen, and important dates in Google or your phone's calendar.</p></div></div>
     </div>
   </div>
 </section>
@@ -587,6 +628,7 @@
           <li>Star important documents to keep them at the top</li>
           <li>Move any document to another folder — or a brand-new one — without re-typing</li>
           <li>Star a photo icon to reuse it on related items in one tap</li>
+          <li><b>Tags</b> link entries together — a card to its bank, a prescription to its doctor</li>
           <li>Make your own categories — Medical, Property, Pets — with one of 5 forms, including Gallery</li>
         </ul>
       </div>
@@ -596,19 +638,60 @@
       </div>
     </div>
 
+    <!-- Payments -->
+    <div class="feature-row reverse" id="money">
+      <div class="text">
+        <span class="eyebrow">New · Payments</span>
+        <h3>Every EMI, bill and subscription — paid, due and left.</h3>
+        <p>Choose a category — Subscriptions, Loans / EMI, Rent, Bills, Insurance, Credit Cards, School Fees or Investments — and the form fits it. Pocket Locker keeps the record; it never moves your money.</p>
+        <ul class="ticks">
+          <li><b>Loan summary</b>: EMIs paid and pending, balance to repay, interest rate and total interest — worked out for you</li>
+          <li><b>Mark as Paid</b> or <b>Skip</b>, Auto-pay or I pay myself, and “Paid ✓ 7 Nov” when it's done</li>
+          <li>Plans with a length: Valid till, plan amount and <b>Renew</b> with the new policy attached — old plans stay in Plan History</li>
+          <li>Payment page: this month or year, paid vs pending, by category, with reports</li>
+          <li>Reminders that say what's due: “EMI of ₹10,461 due in 3 days”, “Netflix is valid till 9 Nov”</li>
+        </ul>
+      </div>
+      <div class="shot-stage duo">
+        <div class="phone"><img src="images/ui-payments.webp" alt="Payment page: paid in November, pending and spending by category" width="640" height="1354" loading="lazy"></div>
+        <div class="phone"><img src="images/ui-loan.webp" alt="Personal loan with EMI, next due date and loan summary" width="640" height="1353" loading="lazy"></div>
+      </div>
+    </div>
+
+    <!-- Wealth -->
+    <div class="feature-row" id="wealth-row">
+      <div class="text">
+        <span class="eyebrow">New · Wealth</span>
+        <h3>Your savings and investments, worked out for you.</h3>
+        <p>FD, RD, mutual funds and SIPs, shares, PPF, NPS, PF, gold, bonds, chit funds, crypto and property — in your country's own words. See what you put in, what it's worth and what it earns.</p>
+        <ul class="ticks">
+          <li><b>FD / RD calculator</b>: maturity date, maturity amount and interest earned till today</li>
+          <li>Interest, rent, dividends and pensions recorded as income</li>
+          <li><b>Update value</b> to see profit or loss — everything stays offline</li>
+          <li>Mark as Sold, Matured or Closed, and a report of where your money is</li>
+          <li>Reminders before a deposit matures — “plan to renew or withdraw”</li>
+        </ul>
+      </div>
+      <div class="shot-stage duo">
+        <div class="phone"><img src="images/ui-wealth.webp" alt="Wealth page with holdings value, invested, profit and where your money is" width="640" height="1351" loading="lazy"></div>
+        <div class="phone"><img src="images/ui-fd.webp" alt="Fixed deposit with maturity amount, interest rate and interest earned till today" width="640" height="1351" loading="lazy"></div>
+      </div>
+    </div>
+
     <!-- Reminders -->
     <div class="feature-row">
       <div class="text">
         <span class="eyebrow">Never miss a date</span>
-        <h3>Reminded before insurance, PUC or a card expires.</h3>
+        <h3>Reminded before anything expires or falls due.</h3>
         <p>Choose 7 or 30 days before any expiry date and a reminder arrives at 9:00 AM — every day from a week before until it's due. Tap the notification and the document opens.</p>
         <ul class="ticks">
           <li>“Expiring soon” on Home and a Reminders tab for the next 30 days</li>
           <li>Tap <b>Renew</b> — the new date and amount are saved, old ones go into history</li>
           <li>Clear notifications like “Car insurance · Vehicle” — tap to open it</li>
-          <li>Bank card expiry and “change this password by” reminders</li>
+          <li>Payments, plan end dates, deposit maturities, card expiry, medicine refills and vaccines too</li>
+          <li>Upcoming on Home, a home-screen widget and <b>Show in Calendar</b></li>
           <li>A gentle Saturday-evening nudge to save one more document — turn it off any time</li>
-          <li>Custom date &amp; time reminders, including Notes</li>
+          <li>Custom date &amp; time and multi-stage reminders, including Notes</li>
         </ul>
       </div>
       <div class="shot-stage duo">
@@ -678,8 +761,34 @@
   </div>
 </section>
 
+<!-- ============ HEALTH ============ -->
+<section id="health" class="pg">
+  <div class="wrap pg-panel">
+    <div>
+      <span class="eyebrow">New · Health</span>
+      <h2>The whole family's health records, one tap away.</h2>
+      <p class="lead">Add each person — Me, Mom, Dad, Baby — and keep their reports, prescriptions, lab tests, scans and vaccinations in one private place. Take them to the doctor on your phone, even offline.</p>
+      <ul class="ticks">
+        <li>8 tiles per person: Reports, Prescriptions, Lab Tests, Scans, Vaccinations, Medical History, Doctors, Others</li>
+        <li>“Add Prescription · Mom” fills in the person and type for you</li>
+        <li>Reminders for refills, next visits, next tests and next doses</li>
+        <li>Tag a prescription to its doctor and lab report</li>
+      </ul>
+      <p class="fine">The vaccine schedule is shown as a guide — always follow your paediatrician.</p>
+    </div>
+    <div class="pg-grid">
+      <div class="pg-card"><div class="ic">👨‍👩‍👧</div><h3>Person by person</h3><p>Everyone, Me, Mom, Dad… each with their own records and counts.</p></div>
+      <div class="pg-card"><div class="ic">💊</div><h3>Prescriptions</h3><p>Medicines &amp; dosage with a refill or next-visit reminder.</p></div>
+      <div class="pg-card"><div class="ic">🧪</div><h3>Lab tests &amp; scans</h3><p>Photos and PDFs of every report, found in two taps.</p></div>
+      <div class="pg-card"><div class="ic">👶</div><h3>Baby growth</h3><p>Height, weight and head size with a growth log.</p></div>
+      <div class="pg-card"><div class="ic">💉</div><h3>Vaccine schedule</h3><p>Due dates from the birth date, late ones in red, reminders 7 days before.</p></div>
+      <div class="pg-card"><div class="ic">🔐</div><h3>Private &amp; encrypted</h3><p>Health details are encrypted on your phone — nothing is uploaded.</p></div>
+    </div>
+  </div>
+</section>
+
 <!-- ============ PRIVATE GALLERY ============ -->
-<section id="private-gallery" class="pg">
+<section id="private-gallery" class="pg" style="padding-top:0">
   <div class="wrap pg-panel">
     <div>
       <span class="eyebrow">New · Private Gallery</span>
@@ -708,19 +817,21 @@
 <section id="categories" class="alt">
   <div class="wrap">
     <div class="section-head">
-      <span class="eyebrow">7 ready-made categories</span>
+      <span class="eyebrow">9 ready-made categories</span>
       <h2>A place for everything you need to keep</h2>
-      <p>Each category comes with the right form, so adding something takes seconds.</p>
+      <p>Each category comes with the right form for your country, so adding something takes seconds.</p>
     </div>
     <div class="cats">
-      <div class="cat"><div class="hd"><span class="em">🔑</span><h3>Password</h3></div><p>Logins for apps, websites, email and Wi-Fi — username, URL, PIN and password.</p><p class="extra">Generator built in · change-by reminder</p></div>
+      <div class="cat"><div class="hd"><span class="em">🔑</span><h3>Password</h3></div><p>Logins for apps, websites, email and Wi-Fi — with autofill and 2FA codes.</p><p class="extra">Generator · Password Health</p></div>
       <div class="cat"><div class="hd"><span class="em">📝</span><h3>Notes</h3></div><p>Lists, ideas and to-dos in a full-page editor with checklists and highlights.</p><p class="extra">Home-screen “New Note” shortcut</p></div>
-      <div class="cat"><div class="hd"><span class="em">🚗</span><h3>Vehicle</h3></div><p>RC book, insurance, PUC and service records with policy number, dates and amount.</p><p class="extra">Expiry reminders · renewal history</p></div>
-      <div class="cat"><div class="hd"><span class="em">🪪</span><h3>Identity</h3></div><p>Aadhaar, PAN, driving licence, passport and voter ID.</p><p class="extra">Front &amp; back on one A4 page</p></div>
+      <div class="cat"><div class="hd"><span class="em">🚗</span><h3>Vehicle</h3></div><p>Registration, insurance, inspection and service records.</p><p class="extra">Expiry reminders · renewal history</p></div>
+      <div class="cat"><div class="hd"><span class="em">🪪</span><h3>Identity</h3></div><p>National ID, tax ID, driving licence, passport and voter ID.</p><p class="extra">Front &amp; back on one A4 page</p></div>
+      <div class="cat"><div class="hd"><span class="em">🎓</span><h3>Certificate</h3></div><p>Degrees, marksheets, course and company certificates.</p><p class="extra">Multi-page scan as one PDF</p></div>
+      <div class="cat"><div class="hd"><span class="em">🏦</span><h3>Bank</h3></div><p>Account number, branch details, UPI or payment ID and netbanking ID.</p><p class="extra">Tagged to its cards · Copy All</p></div>
+      <div class="cat"><div class="hd"><span class="em">💳</span><h3>Payment</h3></div><p>EMIs, rent, bills, subscriptions, insurance premiums and school fees.</p><p class="extra">Mark as Paid · loan summary</p></div>
+      <div class="cat"><div class="hd"><span class="em">💎</span><h3>Wealth</h3></div><p>Deposits, funds, shares, PF, gold, bonds and property.</p><p class="extra">FD calculator · maturity reminders</p></div>
       <div class="cat"><div class="hd"><span class="em">🛡️</span><h3>Warranty</h3></div><p>Warranty cards and purchase bills for every gadget and appliance.</p><p class="extra">Reminded before the warranty ends</p></div>
-      <div class="cat"><div class="hd"><span class="em">🎓</span><h3>Certificate</h3></div><p>Degrees, marksheets and course certificates.</p><p class="extra">Multi-page scan as one PDF</p></div>
-      <div class="cat"><div class="hd"><span class="em">🏦</span><h3>Bank</h3></div><p>Account number, IFSC, branch, UPI ID, card number and expiry, netbanking ID.</p><p class="extra">Card expiry reminder · Copy All</p></div>
-      <div class="cat custom"><div class="hd"><span class="em">➕</span><h3>Your own</h3></div><p>Medical, Property, Pets — any category you need, with your own icon. Or a PIN-locked Private Gallery.</p><p class="extra">Choose from 5 form types</p></div>
+      <div class="cat custom"><div class="hd"><span class="em">➕</span><h3>Your own</h3></div><p>Make your own: Details (any name and icon), Cards, Health or a PIN-locked Gallery.</p><p class="extra">Works just like the built-in ones</p></div>
     </div>
   </div>
 </section>
@@ -737,15 +848,15 @@
       </div>
     </div>
     <div class="also">
-      <div class="also-item"><div class="ic">🔐</div><h3>AES-256 on your phone</h3><p>Titles, numbers, notes, passwords and 2FA keys are encrypted before they're saved. Photos and PDFs stay in the app's private storage.</p></div>
+      <div class="also-item"><div class="ic">🔐</div><h3>AES-256 on your phone</h3><p>Titles, numbers, notes, passwords, 2FA keys and plan and health details are encrypted before they're saved. Photos and PDFs stay in the app's private storage.</p></div>
       <div class="also-item"><div class="ic">👆</div><h3>App Lock &amp; auto-lock</h3><p>Opens with fingerprint, face unlock or screen lock. Locks again immediately, after 1, 5 or 10 minutes — your choice.</p></div>
       <div class="also-item"><div class="ic">📴</div><h3>Fully offline</h3><p>View, add and search everything with no internet at all.</p></div>
       <div class="also-item"><div class="ic">☁️</div><h3>Backup to your Drive</h3><p>A private app folder only Pocket Locker can open. Auto Backup after each change; restore on a new phone — even Android ↔ iPhone.</p></div>
       <div class="also-item"><div class="ic">🛡️</div><h3>Backup PIN</h3><p>An optional 6-digit PIN locks your Drive backup — even someone in your Google account can't restore your vault.</p></div>
       <div class="also-item"><div class="ic">🗑️</div><h3>30-day Trash</h3><p>Deleted something by mistake? Restore it any time within 30 days.</p></div>
       <div class="also-item"><div class="ic">📦</div><h3>Import &amp; Export</h3><p>Fill many entries from Excel, and export everything as one password-locked (AES-256) ZIP you can keep on a laptop.</p></div>
-      <div class="also-item"><div class="ic">🌍</div><h3>Made for your country</h3><p>Bank forms and vehicle documents match where you live — IFSC and RC Book in India, Sort Code and MOT in the UK, IBAN and Mulkiya in the UAE, and more.</p></div>
-      <div class="also-item"><div class="ic">🌗</div><h3>Light &amp; Dark mode</h3><p>Light, Dark or follow your phone's setting.</p></div>
+      <div class="also-item"><div class="ic">🌍</div><h3>Made for your country</h3><p>Bank forms, vehicle documents, payment names, wealth types and currency match where you live — set up for 21 countries, from IFSC and RC Book in India to Sort Code and MOT in the UK.</p></div>
+      <div class="also-item"><div class="ic">🌗</div><h3>Light, Dark or Auto</h3><p>Light, Dark, follow your phone, or Auto by time — light by day, dark from 6:30 PM.</p></div>
     </div>
   </div>
 </section>
@@ -759,13 +870,14 @@
       <p>No clutter — just your documents, organised clearly.</p>
     </div>
     <div class="gallery">
-      <figure><div class="phone"><img src="images/ui-home-v2.webp" alt="Home screen" width="640" height="1311" loading="lazy"></div><figcaption>Your whole vault at a glance</figcaption></figure>
+      <figure><div class="phone"><img src="images/ui-home-v3.webp" alt="Home screen with Upcoming" width="640" height="1303" loading="lazy"></div><figcaption>Your whole vault at a glance</figcaption></figure>
+      <figure><div class="phone"><img src="images/ui-payments-list.webp" alt="Payments by category" width="640" height="1359" loading="lazy"></div><figcaption>Every EMI, bill &amp; rent</figcaption></figure>
+      <figure><div class="phone"><img src="images/ui-loan.webp" alt="Loan summary" width="640" height="1353" loading="lazy"></div><figcaption>Loan summary, worked out</figcaption></figure>
+      <figure><div class="phone"><img src="images/ui-fd.webp" alt="Fixed deposit" width="640" height="1351" loading="lazy"></div><figcaption>FD maturity &amp; interest</figcaption></figure>
       <figure><div class="phone"><img src="images/ui-generator-tools.webp" alt="Generator with Autofill, Health and Authenticator" width="640" height="1311" loading="lazy"></div><figcaption>All password tools in one tab</figcaption></figure>
       <figure><div class="phone"><img src="images/ui-2fa.webp" alt="Login with 2FA code" width="640" height="1298" loading="lazy"></div><figcaption>2FA codes next to the login</figcaption></figure>
-      <figure><div class="phone"><img src="images/ui-password-health.webp" alt="Password Health" width="640" height="1307" loading="lazy"></div><figcaption>Password Health score</figcaption></figure>
       <figure><div class="phone"><img src="images/ui-insurance-detail.webp" alt="Insurance document details" width="640" height="1352" loading="lazy"></div><figcaption>Expiry, attachments &amp; renew</figcaption></figure>
-      <figure><div class="phone"><img src="images/ui-add-note.webp" alt="Scan and auto-fill when adding" width="640" height="1294" loading="lazy"></div><figcaption>Scan it — auto-fill types it</figcaption></figure>
-      <figure><div class="phone"><img src="images/ui-new-gallery.webp" alt="New Gallery category" width="640" height="1296" loading="lazy"></div><figcaption>Private Gallery &amp; your own categories</figcaption></figure>
+      <figure><div class="phone"><img src="images/ui-home-start.webp" alt="Home on first start with 9 categories" width="640" height="1307" loading="lazy"></div><figcaption>9 categories, ready to use</figcaption></figure>
     </div>
   </div>
 </section>
@@ -820,8 +932,8 @@
   <div class="wrap">
     <div class="section-head">
       <span class="eyebrow">Pricing</span>
-      <h2>Free to start. Premium when you need more.</h2>
-      <p>The scanner, auto-fill, password generator, Password Health score and backup are free for everyone.</p>
+      <h2>Almost everything is free.</h2>
+      <p>Payments, Wealth, Health, Cards, your own categories, Import &amp; Export, the widget and Calendar are all included for free.</p>
     </div>
     <div class="plans">
       <div class="plan">
@@ -829,35 +941,31 @@
         <p class="sub">Everything you need to get organised</p>
         <div class="price">₹0</div>
         <ul class="ticks">
-          <li>Up to 15 documents</li>
-          <li>All 7 categories, with folders</li>
-          <li>Scanner, Auto-fill (photos &amp; PDFs) &amp; Password Generator</li>
-          <li>Share to Pocket Locker, My Files &amp; PDF viewer</li>
-          <li>Password Health score &amp; password history</li>
-          <li>One expiry reminder per document (7 or 30 days)</li>
-          <li>Google Drive backup, restore &amp; Backup PIN</li>
-          <li>Email support</li>
+          <li>Up to 15 entries and 30 private photos</li>
+          <li>All 9 categories + your own (Details, Cards, Gallery, Health)</li>
+          <li>Payments, Wealth, Health page and Cards wallet</li>
+          <li>Scanner, Auto-fill, Tags, widget &amp; Show in Calendar</li>
+          <li>Expiry, payment, maturity and health reminders</li>
+          <li>Password generator, history &amp; Password Health score</li>
+          <li>Import &amp; Export, Google Drive backup &amp; Backup PIN</li>
         </ul>
       </div>
       <div class="plan premium">
         <span class="ribbon">Best value</span>
         <h3>Premium</h3>
-        <p class="sub">For the whole family's paperwork</p>
+        <p class="sub">No limits, plus the power tools</p>
         <div class="price">₹349 <small>/ year</small></div>
         <ul class="ticks">
-          <li>Unlimited documents</li>
-          <li>Unlimited custom categories</li>
-          <li>Several reminders per document</li>
-          <li>Custom date &amp; time reminders, including Notes</li>
-          <li>Password Autofill &amp; 2FA Authenticator</li>
-          <li>Password Health details — what to fix</li>
-          <li>Private Gallery with albums &amp; PIN lock</li>
-          <li>Import &amp; Export (Excel, CSV, locked ZIP)</li>
+          <li>Unlimited entries and private photos</li>
+          <li>Password Autofill on Android &amp; iPhone</li>
+          <li>2FA Authenticator</li>
+          <li>Custom date &amp; time and multi-stage reminders</li>
+          <li>Full Password Health report</li>
           <li>Priority support</li>
         </ul>
       </div>
     </div>
-    <p class="plan-note">Premium is a yearly subscription that renews until you cancel in Google Play or the App Store. Premium comes from your store account — use Restore Purchases on a new phone. Prices shown are for India; other countries see their local price in the store. Pocket Locker is currently available in India and coming soon to the UK, Ireland, the US, Canada, Australia, New Zealand, Singapore, the UAE, Saudi Arabia, Qatar, Oman, Kuwait and Bahrain.</p>
+    <p class="plan-note">Premium is a yearly subscription that renews until you cancel in Google Play or the App Store. Premium comes from your store account — use Restore Purchases on a new phone. Price shown is for India; other countries see their local price in the store.</p>
   </div>
 </section>
 
@@ -891,19 +999,27 @@
       </details>
       <details>
         <summary>Is Pocket Locker available in my country?</summary>
-        <p>Right now Pocket Locker is available in India, on Google Play and the App Store. It's coming soon to 13 more countries: the UK, Ireland, the US, Canada, Australia, New Zealand, Singapore, the UAE, Saudi Arabia, Qatar, Oman, Kuwait and Bahrain — with bank forms, vehicle documents and currency made for each country. Follow us on Instagram or YouTube for launch news.</p>
+        <p>Pocket Locker is available in India, the UK, the US, Canada, Australia, New Zealand, Singapore, the UAE, Saudi Arabia and Qatar, with Oman, Kuwait, Bahrain and Ireland coming soon. The app is set up for 21 countries — bank forms, vehicle documents, payment names, wealth types and currency match where you live.</p>
+      </details>
+      <details>
+        <summary>Can Pocket Locker track my EMIs and investments?</summary>
+        <p>Yes. Payments tracks EMIs, rent, bills, subscriptions and premiums with Mark as Paid, loan summaries and reminders. Wealth tracks deposits, funds, shares, PF, gold and property with an FD / RD calculator and maturity reminders. Pocket Locker keeps the record — it never connects to your bank or moves money.</p>
+      </details>
+      <details>
+        <summary>Can I keep my family's health records?</summary>
+        <p>Yes. The Health page keeps each person's reports, prescriptions, lab tests, scans, vaccinations and doctors, with refill and next-visit reminders — plus baby growth and a vaccine schedule shown as a guide. Everything is encrypted on your phone.</p>
       </details>
       <details>
         <summary>Can Pocket Locker fill my passwords and 2FA codes?</summary>
-        <p>Yes, with Premium. Password Autofill shows your matching saved logins above the keyboard in other apps and websites on Android and iPhone, after your fingerprint or Face ID. The built-in Authenticator keeps your 2FA codes next to each login and works fully offline.</p>
+        <p>Yes. Password Autofill shows your matching saved logins above the keyboard in other apps and websites on Android and iPhone, after your fingerprint or Face ID. The built-in Authenticator keeps your 2FA codes next to each login and works fully offline.</p>
       </details>
       <details>
         <summary>Can I move my passwords from another app?</summary>
-        <p>Yes, with Premium. Import a CSV from Google Password Manager / Chrome, Bitwarden, LastPass, 1Password or Firefox — including 2FA keys when the file has them. You see a preview before anything is saved.</p>
+        <p>Yes. Import a CSV from Google Password Manager / Chrome, Bitwarden, LastPass, 1Password or Firefox — including 2FA keys when the file has them. You see a preview before anything is saved.</p>
       </details>
       <details>
         <summary>What is Private Gallery?</summary>
-        <p>A Premium feature that moves private photos out of your phone's gallery into albums inside Pocket Locker, with an optional 4-digit PIN on top of your phone's lock. Locked photos stay hidden from search and recent lists.</p>
+        <p>It moves private photos out of your phone's gallery into albums inside Pocket Locker, with an optional 4-digit PIN on top of your phone's lock. Locked photos stay hidden from search and recent lists.</p>
       </details>
       <details>
         <summary>Are the copies I store official documents?</summary>
@@ -972,7 +1088,7 @@
       </a>
     </div>
     <div class="copy"><span>© <span id="year">2026</span> App4We</span><span>Built with care by <a class="app4we strong" href="https://app4we.com" target="_blank" rel="noopener">App<span class="four">4</span>We</a></span></div>
-    <p class="disclaimer">Currently available in India — coming soon to 13 more countries. Pocket Locker keeps your own copies organised. Stored copies are for your reference and are not official documents.</p>
+    <p class="disclaimer">Available in India, the UK, the US, Canada, Australia, New Zealand, Singapore, the UAE, Saudi Arabia and Qatar — more countries coming soon. Pocket Locker keeps your own copies organised. Stored copies are for your reference and are not official documents.</p>
   </div>
 </footer>
 
